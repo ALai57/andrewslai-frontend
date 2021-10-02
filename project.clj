@@ -39,11 +39,11 @@
   :profiles
   {:dev {:dependencies [[binaryage/devtools "1.0.0"]
                         [cider/piggieback "0.4.2"]
-                        [figwheel-sidecar "0.5.19"]
-                        [org.clojure/test.check "1.1.0"]
+                        [com.bhauman/cljs-test-display "0.1.1"]
                         [com.bhauman/figwheel-main "0.2.12"]
                         [com.bhauman/rebel-readline-cljs "0.1.4"]
-                        [com.bhauman/cljs-test-display "0.1.1"]]
+                        [figwheel-sidecar "0.5.19"]
+                        [org.clojure/test.check "1.1.0"]]
          :plugins [[lein-ring "0.12.5"]]
          :source-paths ["src/andrewslai/cljs"]
          :repl-options {:nrepl-middleware [cider.piggieback/wrap-cljs-repl]}}
