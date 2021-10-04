@@ -11,7 +11,7 @@ Clone the repo and install [leiningen](https://leiningen.org/).
 
 ## Tests
 ```bash
-lein fig:build
+lein fig:repl
 ```
 then navigate to `/tests.html` to see test output
 
@@ -39,5 +39,5 @@ lein fig:prod
 
 #### Interactive development with locally-running backend
 ```bash
-lein fig:build
+lein fig:repl
 ```
