@@ -1,7 +1,7 @@
 (defproject org.clojars.alai57/andrewslai-frontend "0.0.2-SNAPSHOT"
   :description "Front end for the andrewslai blogging app"
   :dependencies [[org.clojure/clojure "1.10.1"]
-                 [org.clojars.alai57/andrewslai "0.0.33"]
+                 [org.clojars.alai57/andrewslai "0.0.44"]
                  [clj-commons/secretary "1.2.4"]
                  [cljs-ajax "0.8.0"]
                  [cljsjs/react "16.13.0-0"]

@@ -7,14 +7,14 @@
             [andrewslai.cljs.resume-cards :as resume-cards]
             [clojure.string :refer [includes?]]
             [re-frame.core :refer [subscribe
-                                   dispatch]]))
+                                   dispatch]]
+            [taoensso.timbre :as log]))
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;; Landing pages
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 
 (defn home []
-  (println "Home")
   [:div
    [nav/primary-nav]
    [cards/recent-content-display]])
@@ -91,5 +91,5 @@
 
 (defn app []
   (let [active-panel (subscribe [:active-panel])]
-    (println "active panel" @active-panel)
+    (log/infof "Active panel %s" @active-panel)
     (get panels @active-panel)))

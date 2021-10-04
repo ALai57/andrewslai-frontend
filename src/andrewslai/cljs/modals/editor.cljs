@@ -1,5 +1,6 @@
 (ns andrewslai.cljs.modals.editor
-  (:require [andrewslai.cljs.modal :refer [modal-template close-modal]]))
+  (:require [andrewslai.cljs.modal :refer [modal-template close-modal]]
+            [taoensso.timbre :as log]))
 
 (defn create-article-failure [payload]
   {:title "Article creation failed!"
@@ -18,7 +19,7 @@
 
 (defn create-article-success [{:keys [title author timestamp
                                       article_tags article_url] :as article}]
-  (println article (type article))
+  (log/infof "Success: %s %s" article (type article))
   (let [url (str "/#/" article_tags "/content/" article_url)
         close-fn (fn []
                    (do (close-modal)
