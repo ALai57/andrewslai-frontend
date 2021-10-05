@@ -23,7 +23,7 @@
 (dispatch-sync [:request-portfolio-cards])
 
 ;; -- Debugging aids ----------------------------------------------------------
-(devtools/install!)       ;; https://github.com/binaryage/cljs-devtools
+;;(devtools/install!)       ;; https://github.com/binaryage/cljs-devtools
 (enable-console-print!)   ;; so that println writes to `console.log`
 
 ;; -- Routes and History ------------------------------------------------------

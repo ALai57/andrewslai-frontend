@@ -8,7 +8,7 @@
             [clojure.string :refer [includes?]]
             [re-frame.core :refer [subscribe
                                    dispatch]]
-            [taoensso.timbre :as log]))
+            [taoensso.timbre :refer-macros [infof]]))
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;; Landing pages
@@ -91,5 +91,5 @@
 
 (defn app []
   (let [active-panel (subscribe [:active-panel])]
-    (log/infof "Active panel %s" @active-panel)
+    (infof "Active panel %s" @active-panel)
     (get panels @active-panel)))

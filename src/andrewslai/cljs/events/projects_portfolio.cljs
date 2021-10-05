@@ -1,7 +1,7 @@
 (ns andrewslai.cljs.events.projects-portfolio
   (:require [ajax.core :as ajax]
             [re-frame.core :refer [dispatch reg-event-db reg-event-fx]]
-            [taoensso.timbre :as log]))
+            [taoensso.timbre :refer-macros [info]]))
 
 (defn json-string->clj [s]
   (-> js/JSON
@@ -58,7 +58,7 @@
           projects))
 
 (defn select-organizations-associated-with-project [projects organizations]
-  (log/info "Projects" projects)
+  (info "Projects" projects)
   (let [associated-organizations (->> projects
                                       (map :organization_names)
                                       flatten
