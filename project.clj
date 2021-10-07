@@ -1,7 +1,7 @@
 (defproject org.clojars.alai57/andrewslai-frontend "0.0.2-SNAPSHOT"
   :description "Front end for the andrewslai blogging app"
   :dependencies [[org.clojure/clojure "1.10.1"]
-                 [org.clojars.alai57/andrewslai "0.0.44"]
+                 [org.clojars.alai57/andrewslai "0.0.46"]
                  [clj-commons/secretary "1.2.4"]
                  [cljs-ajax "0.8.0"]
                  [cljsjs/react "16.13.0-0"]
@@ -23,8 +23,7 @@
                  [reagent "0.10.0"]
                  [ring "1.8.0"]
                  [com.bhauman/figwheel-main "0.2.12"]
-                 [sablono "0.8.6"]
-                 [com.taoensso/timbre "4.10.0"]]
+                 [sablono "0.8.6"]]
 
   :plugins [[lein-shell "0.5.0"]]
 
